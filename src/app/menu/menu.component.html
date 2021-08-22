@@ -1,5 +1,4 @@
 <div class="container" fxLayout="column" fxLayoutGap="10px">
-
     <div fxFlex>
         <div>
             <h3>Menu</h3>
@@ -18,7 +17,9 @@
         </mat-grid-list>
     </div>
 
-    <div fxFlex *ngIf="selectedDish">
+    <app-dish-detail></app-dish-detail>
+
+    <!--<div fxFlex *ngIf="selectedDish">
         <mat-card>
             <mat-card-header>
                 <h3>{{selectedDish.name | uppercase}}</h3>
@@ -32,6 +33,5 @@
                 <button mat-button>SHARE</button>
             </mat-card-actions>
         </mat-card>
-    </div>
+    </div>-->
 
-</div>
