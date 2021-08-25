@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Dish } from '../shared/dish';
 
 const DISH = {
   id: '0',
