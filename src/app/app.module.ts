@@ -17,6 +17,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 
@@ -31,6 +32,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+
+import { baseURL } from './shared/baseurl';
 
 /*Services*/
 
@@ -62,6 +65,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
     MatToolbarModule, 
     AppRoutingModule,
     MatListModule,
@@ -77,7 +81,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatProgressSpinnerModule,
     MatSliderModule
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService, {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent],
   entryComponents:[LoginComponent]
 })
