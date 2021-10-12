@@ -45,6 +45,7 @@ import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 /*Routing*/
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
